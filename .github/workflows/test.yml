@@ -22,7 +22,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run unit tests with coverage
-        run: npm run test:coverage
+      - name: Run tests
         env:
           CI: true
+        run: npx jest --ci --coverage --passWithNoTests --reporters=default --reporters=github-actions
